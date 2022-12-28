@@ -7,7 +7,8 @@ const initialState = {
         email: '',
         phone: '',
         selectedPlan: '',
-        addOns: []
+        monthly: true,
+        addOns: [],
     },
 }
 

@@ -1,0 +1,29 @@
+@import "../../../variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .toggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 15px 56px;
+    margin-top: 12px;
+    background-color: $alabaster;
+    border-radius: 8px;
+
+    .toggleLabel {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $cool-gray;
+    }
+
+    .toggleLabel.active {
+        color: $marine-blue;
+    }
+  }
+}

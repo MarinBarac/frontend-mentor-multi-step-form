@@ -1,4 +1,5 @@
 import PersonalInfo from "../InputSlide/PersonalInfo/PersonalInfo";
+import SelectPlan from "../InputSlide/SelectPlan/SelectPlan";
 
 export const INPUTS = [
     {
@@ -11,7 +12,7 @@ export const INPUTS = [
         id: 1,
         title: 'Select your plan',
         description: 'You have the option of monthly or yearly billing.',
-        jsxElement: <></>
+        jsxElement: <SelectPlan />
     },
     {
         id: 2,
