@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+
+.wrapper {
+    width: 100%;
+    padding: 0 16px;
+    margin-top: 100px;
+    position: relative;
+    z-index: 5;
+
+    @media screen and (min-width: $tablet) {
+        max-width: 940px;
+        padding: 0;
+        margin: 0;
+    }
+}
