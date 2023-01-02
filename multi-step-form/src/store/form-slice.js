@@ -34,6 +34,13 @@ const formSlice = createSlice({
         },
         setAddOns(state, action) {
             state.formData.addOns = [...action.payload.addOns];
+        },
+        addAddOn(state, action) {
+            state.formData.addOns.push(action.payload.name);
+        },
+        removeAddOn(state, action) {
+            const indexOfAddON = state.formData.addOns.findIndex(item => item === action.payload.name);
+            state.formData.addOns.splice(indexOfAddON, 1);
         }
     }
 });

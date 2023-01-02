@@ -1,0 +1,53 @@
+@import "../../../../variables.scss";
+
+.container {
+    display: grid;
+    grid-template-columns: 20px 1fr 43px;
+    gap: 16px;
+    border: 1px solid $light-gray;
+    border-radius: 8px;
+    padding: 10px 16px;
+    transition: .5s;
+
+    input {
+        width: 20px;
+        margin: 0;
+        accent-color: $purplish-blue;
+        border-radius: 4px;
+    }
+
+    .centerText {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .name {
+            margin: 0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            color: $marine-blue;
+        }
+
+        .description {
+            margin: 0;
+            margin-top: 3px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+            color: $cool-gray;
+        }
+    }
+
+    .price {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: $purplish-blue;
+    }
+}
+
+.container.selected {
+    border: 1px solid $purplish-blue;
+    background-color: $alabaster;
+}

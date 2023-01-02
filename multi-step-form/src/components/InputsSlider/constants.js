@@ -1,4 +1,5 @@
 import PersonalInfo from "../InputSlide/PersonalInfo/PersonalInfo";
+import PickAddOns from "../InputSlide/PickAddOns/PickAddOns";
 import SelectPlan from "../InputSlide/SelectPlan/SelectPlan";
 
 export const INPUTS = [
@@ -18,7 +19,7 @@ export const INPUTS = [
         id: 2,
         title: 'Pick add-ons',
         description: 'Add-ons help enhance your gaming experience.',
-        jsxElement: <></>
+        jsxElement: <PickAddOns />
     },
     {
         id: 3,
