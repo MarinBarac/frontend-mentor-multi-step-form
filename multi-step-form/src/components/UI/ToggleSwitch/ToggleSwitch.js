@@ -1,10 +1,9 @@
 import styles from './ToggleSwitch.module.scss';
 
-const ToggleSwitch = () => {
+const ToggleSwitch = ({ onClick }) => {
     return <div className={styles.switch}>
-        <input type="checkbox" />
+        <input type="checkbox" onClick={onClick}/>
         <span className={styles.slider}/>
-        <input type="checkbox" />
     </div>
 }
 

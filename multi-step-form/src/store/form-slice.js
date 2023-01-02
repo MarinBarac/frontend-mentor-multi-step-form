@@ -6,7 +6,7 @@ const initialState = {
         name: '',
         email: '',
         phone: '',
-        selectedPlan: '',
+        selectedPlan: 'Arcade',
         monthly: true,
         addOns: [],
     },
@@ -17,19 +17,23 @@ const formSlice = createSlice({
     initialState: {...initialState},
     reducers: {
         setName(state, action) {
-            state.formData.name = action.name;
+            state.formData.name = action.payload.name;
         },
         setEmail(state, action) {
-            state.formData.email = action.email;
+            state.formData.email = action.payload.email;
         },
         setPhone(state, action) {
-            state.formData.phone = action.phone;
+            state.formData.phone = action.payload.phone;
         },
         setSelectedPlan(state, action) {
-            state.formData.selectedPlan = action.selectedPlan;
+            console.log(action);
+            state.formData.selectedPlan = action.payload.selectedPlan;
+        },
+        toggleMonthly(state, action) {
+            state.formData.monthly = !state.formData.monthly;
         },
         setAddOns(state, action) {
-            state.formData.addOns = [...action.addOns];
+            state.formData.addOns = [...action.payload.addOns];
         }
     }
 });

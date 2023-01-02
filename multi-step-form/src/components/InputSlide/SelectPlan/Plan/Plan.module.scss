@@ -4,7 +4,7 @@
     padding: 16px 15px;
     display: flex;
     gap: 14px;
-    align-items: center;
+    align-items: flex-start;
     border: 1px solid $light-gray;
     border-radius: 8px;
     transition: 500ms;
@@ -29,6 +29,14 @@
             font-size: 14px;
             line-height: 20px;
             color: $cool-gray
+        }
+
+        .promo {
+            margin: 0;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+            color: $marine-blue;
         }
     }
 }
