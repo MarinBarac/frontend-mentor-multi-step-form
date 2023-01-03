@@ -5,6 +5,12 @@
     flex-direction: column;
     gap: 16px;
 
+    .icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 15px;
+    }
+
     .title {
         font-weight: 700;
         font-size: 24px;
@@ -20,4 +26,9 @@
         color: $cool-gray;
         margin: 0;
     }
+}
+
+.container.centered {
+    align-items: center;
+    text-align: center;
 }

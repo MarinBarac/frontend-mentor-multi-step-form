@@ -5,7 +5,7 @@ import InputSlide from '../InputSlide/InputSlide';
 const InputsSlider = () => {
     return <div className={styles.wrapper}>
         <div className={styles.container}>
-            <InputSlide input={INPUTS[3]}/>
+            <InputSlide input={INPUTS[4]}/>
         </div>
     </div>
 }
