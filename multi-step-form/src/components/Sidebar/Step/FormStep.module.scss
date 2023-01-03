@@ -13,14 +13,18 @@
         letter-spacing: 1px;
         font-weight: 700;
         color: $white;
-    }
-
-    .numberContainer:hover {
-        background-color: $light-blue;
-        color: $marine-blue;
+        transition: .5s;
     }
 
     .textContainer {
         display: none;
+    }
+}
+
+.container.active {
+    .numberContainer {
+        background-color: $light-blue;
+        border: 1px solid $light-blue;
+        color: $marine-blue;
     }
 }

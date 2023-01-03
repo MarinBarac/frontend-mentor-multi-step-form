@@ -1,15 +1,38 @@
 import styles from "./Buttons.module.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { formActions } from "../../store/form-slice";
 
 const Buttons = () => {
+  const dispatch = useDispatch();
   const currentStep = useSelector((state) => state.form.currentStep);
 
   return (
     <div className={styles.container}>
-      {currentStep > 0 && <p className={styles.backBtn}>Go Back</p>}
-      {currentStep < 3 && <button className={styles.nextBtn}>Next Step</button>}
+      {currentStep > 0 && (
+        <p
+          className={styles.backBtn}
+          onClick={() => dispatch(formActions.decreaseStep())}
+        >
+          Go Back
+        </p>
+      )}
+      {currentStep < 3 && (
+        <button
+          className={`${styles.next} ${styles.btn}`}
+          onClick={() => {
+            dispatch(formActions.increaseStep());
+          }}
+        >
+          Next Step
+        </button>
+      )}
       {currentStep === 3 && (
-        <button className={styles.confirmBtn}>Confirm</button>
+        <button
+          className={`${styles.confirm} ${styles.btn}`}
+          onClick={() => dispatch(formActions.submitForm())}
+        >
+          Confirm
+        </button>
       )}
     </div>
   );

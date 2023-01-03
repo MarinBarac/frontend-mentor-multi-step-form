@@ -19,14 +19,26 @@
       color: $cool-gray;
     }
 
-    .nextBtn {
+    .btn {
+      width: 97px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
       border: none;
       border-radius: 4px;
-      padding: 12px 16px;
-      background-color: $marine-blue;
       font-weight: 500;
       font-size: 14px;
       line-height: 16px;
       color: $white;
+    }
+
+    .next {
+      background-color: $marine-blue;
+    }
+
+    .confirm {
+      background-color: $purplish-blue;
     }
 }

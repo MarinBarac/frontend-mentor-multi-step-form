@@ -9,7 +9,7 @@ const SelectPlan = () => {
   const dispatch = useDispatch();
   const monthly = useSelector((state) => state.form.formData.monthly);
   const selectedPlan = useSelector((state) => state.form.formData.selectedPlan);
-    console.log(selectedPlan);
+  
   return (
     <div className={styles.container}>
       {PLANS.map((plan) => (
