@@ -1,3 +1,4 @@
+import FinishingUp from "../InputSlide/FinishingUp/FinishingUp";
 import PersonalInfo from "../InputSlide/PersonalInfo/PersonalInfo";
 import PickAddOns from "../InputSlide/PickAddOns/PickAddOns";
 import SelectPlan from "../InputSlide/SelectPlan/SelectPlan";
@@ -25,6 +26,6 @@ export const INPUTS = [
         id: 3,
         title: 'Finishing up',
         description: 'Double-check everything looks OK before confirming.',
-        jsxElement: <></>
+        jsxElement: <FinishingUp />
     }
 ]

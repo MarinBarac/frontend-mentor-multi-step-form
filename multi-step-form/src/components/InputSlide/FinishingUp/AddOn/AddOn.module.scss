@@ -1,0 +1,23 @@
+@import '../../../../variables.scss';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .name {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $cool-gray;
+    }
+
+    .price {
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $marine-blue;
+    }
+}

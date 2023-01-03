@@ -8,7 +8,16 @@ const initialState = {
         phone: '',
         selectedPlan: 'Arcade',
         monthly: true,
-        addOns: [],
+        addOns: [
+            {
+                name: 'Online service',
+                price: 1
+            },
+            {
+                name: 'Large storage',
+                price: 2
+            }
+        ],
     },
 }
 
@@ -36,10 +45,10 @@ const formSlice = createSlice({
             state.formData.addOns = [...action.payload.addOns];
         },
         addAddOn(state, action) {
-            state.formData.addOns.push(action.payload.name);
+            state.formData.addOns.push(action.payload.addOn);
         },
         removeAddOn(state, action) {
-            const indexOfAddON = state.formData.addOns.findIndex(item => item === action.payload.name);
+            const indexOfAddON = state.formData.addOns.findIndex(item => item.name === action.payload.name);
             state.formData.addOns.splice(indexOfAddON, 1);
         }
     }

@@ -6,7 +6,7 @@ const PickAddOns = () => {
     const addOns = useSelector(state => state.form.formData.addOns);
     
     return <div className={styles.container}>
-        {ADD_ONS.map(item => <AddOn {...item} key={item.name} checked={addOns.includes(item.name)}/>)}
+        {ADD_ONS.map(item => <AddOn addOn={{...item}} key={item.name} checked={addOns.filter(element => element.name === item.name).length > 0}/>)}
     </div>
 }
 
