@@ -13,6 +13,16 @@
             line-height: 14px;
             color: $marine-blue;
         }
+
+        .error {
+            margin: 0;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14px;
+            color: $strawberry-red;
+            opacity: 0;
+            transition: .2s;
+        }
     }
 
     .input {
@@ -24,5 +34,26 @@
         font-weight: 500;
         font-size: 15px;
         line-height: 17px;
+        transition: .2s;
+    }
+}
+
+.container.error {
+    .labelContainer {
+        .error {
+            opacity: 1;
+        }
+    }
+
+    .input {
+        border: 1px solid $strawberry-red
+    }
+}
+
+.container {
+    .input:focus {
+        border: 1px solid $purplish-blue;
+        outline: none;
+        color: $marine-blue;
     }
 }

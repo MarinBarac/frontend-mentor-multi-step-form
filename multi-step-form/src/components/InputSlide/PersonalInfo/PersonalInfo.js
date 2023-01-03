@@ -3,8 +3,9 @@ import { INPUTS } from './constants';
 import TextInput from '../../UI/TextInput';
 
 const PersonalInfo = () => {
+
     return <div className={styles.container}>
-        {INPUTS.map(input => <TextInput {...input} error={false} key={input.name}/>)}
+        {INPUTS.map(input => <TextInput {...input} key={input.name}/>)}
     </div>
 }
 

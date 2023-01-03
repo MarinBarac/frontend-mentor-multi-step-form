@@ -19,9 +19,7 @@ const Buttons = () => {
       {currentStep < 3 && (
         <button
           className={`${styles.next} ${styles.btn}`}
-          onClick={() => {
-            dispatch(formActions.increaseStep());
-          }}
+          onClick={() => dispatch(formActions.increaseStep())}
         >
           Next Step
         </button>

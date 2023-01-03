@@ -27,7 +27,7 @@ const formSlice = createSlice({
     initialState: {...initialState},
     reducers: {
         increaseStep(state, action) {
-            if(state.currentStep < 3) {
+            if(state.currentStep < 3 && (state.formData.email.length > 0 && state.formData.name.length > 0 && state.formData.phone > 0)) {
                 state.currentStep++;
             }
         },

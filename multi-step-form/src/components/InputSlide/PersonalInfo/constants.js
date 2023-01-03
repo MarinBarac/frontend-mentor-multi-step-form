@@ -1,14 +1,22 @@
+import { formActions } from "../../../store/form-slice";
+
 export const INPUTS = [
     {
         name: 'Name',
-        placeHolder: 'e. g. Stephen King'
+        field: 'name',
+        placeHolder: 'e. g. Stephen King',
+        action: formActions.setName
     },
     {
         name: 'Email Address',
-        placeHolder: 'e. g. stephenking@lorem.com'
+        field: 'email',
+        placeHolder: 'e. g. stephenking@lorem.com',
+        action: formActions.setEmail
     },
     {
         name: 'Phone Number',
-        placeHolder: 'e. g. +1 234 567 890'
+        field: 'phone',
+        placeHolder: 'e. g. +1 234 567 890',
+        action: formActions.setPhone
     }
 ]
