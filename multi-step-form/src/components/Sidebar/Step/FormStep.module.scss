@@ -2,12 +2,13 @@
 
 .container {
     .numberContainer {
+        height: 33px;
+        width: 33px;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid $white;
         border-radius: 50%;
-        padding: 5px 8.5px;
         font-size: 14px;
         line-height: 16px;
         letter-spacing: 1px;
@@ -26,5 +27,36 @@
         background-color: $light-blue;
         border: 1px solid $light-blue;
         color: $marine-blue;
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .container {
+        display: flex;
+        height: 33px;
+        gap: 16px;
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .id {
+                margin: 0;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 14px;
+                color: $pastel-blue;
+            }
+
+            .title {
+                margin: 0;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 1px;
+                color: $white;
+            }
+        }
     }
 }

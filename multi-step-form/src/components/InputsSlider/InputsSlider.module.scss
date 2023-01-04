@@ -38,3 +38,14 @@
     left: calc(-400% + 16px);
   }
 }
+
+@media screen and (min-width: $tablet) {
+  .wrapper {
+    width: 100%;
+    max-width: 450px;
+
+    .container {
+      padding: 0;
+    }
+  }
+}

@@ -10,30 +10,58 @@
     border-radius: 10px;
     gap: 16px;
 
+    .titleContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .title {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: $marine-blue;
+            margin: 0;
+        }
+    
+        .description {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            color: $cool-gray;
+            margin: 0;
+        }
+    }
+
     .icon {
         width: 56px;
         height: 56px;
         margin-bottom: 15px;
-    }
-
-    .title {
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 28px;
-        color: $marine-blue;
-        margin: 0;
-    }
-
-    .description {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 25px;
-        color: $cool-gray;
-        margin: 0;
     }
 }
 
 .container.centered {
     align-items: center;
     text-align: center;
+}
+
+@media screen and (min-width: $tablet) {
+    .container {
+        width: 100%;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        padding-top: 40px;
+        gap: 40px;
+
+        .titleContainer {
+            gap: 11px;
+
+            .title {
+                font-size: 32px;
+                line-height: 37px;
+            }
+        }
+
+    }
 }

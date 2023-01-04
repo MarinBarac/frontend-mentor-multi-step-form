@@ -43,3 +43,27 @@
       background-color: $purplish-blue;
     }
 }
+
+@media screen and (min-width: $tablet) {
+  .container {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    padding-bottom: 16px;
+
+    .backBtn {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    .backBtn:hover {
+      cursor: pointer;
+      color: $marine-blue;
+    }
+
+    .next:hover {
+      cursor: pointer;
+      background-color: hsla(213, 72%, 31%, 1);
+    }
+  }
+}

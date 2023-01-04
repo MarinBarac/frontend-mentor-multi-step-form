@@ -19,3 +19,23 @@
         margin: 0;
     }
 }
+
+@media screen and (min-width: $tablet) {
+    .wrapper {
+        max-width: 940px;
+        height: auto;
+        display: flex;
+        gap: 100px;
+        padding: 16px;
+        background-color: $white;
+        border-radius: 15px;
+        
+        .content {
+            padding: 0;
+            width: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
