@@ -11,7 +11,7 @@ const InputsSlider = () => {
   return (
     <div className={styles.wrapper}>
       <div className={`${styles.container} ${styles[`active-${index}`]}`}>
-        {INPUTS.map(input => <InputSlide input={input} />)}
+        {INPUTS.map(input => <InputSlide input={input} key={input.id}/>)}
       </div>
     </div>
   );

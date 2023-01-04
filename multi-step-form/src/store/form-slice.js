@@ -56,14 +56,15 @@ const formSlice = createSlice({
             state.formData.phone = action.payload.phone;
         },
         setSelectedPlan(state, action) {
-            console.log(action.payload.selectedPlan);
             state.formData.selectedPlan = {...action.payload.selectedPlan};
         },
         toggleMonthly(state, action) {
             if(state.formData.monthly) {
                 state.formData.selectedPlan.price *= 10;
+                state.formData.addOns.forEach(addOn => addOn.price *= 10);
             } else {
                 state.formData.selectedPlan.price /= 10;
+                state.formData.addOns.forEach(addOn => addOn.price /= 10);
             }
             state.formData.monthly = !state.formData.monthly;
         },
