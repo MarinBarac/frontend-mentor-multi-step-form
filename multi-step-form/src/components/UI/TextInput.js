@@ -1,18 +1,21 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { formActions } from "../../store/form-slice";
 import styles from "./TextInput.module.scss";
 
 const TextInput = ({ name, field, placeHolder, action }) => {
   const dispatch = useDispatch();
-  const [showError, setShowError] = useState(false);
   const value = useSelector(state => state.form.formData[field]);
+  const showError = useSelector(state => state.form.showError);
 
   const handleChange = (event) => {
     dispatch(action({ [field]: event.target.value }));
   }
 
+  console.log(showError);
+
   const handleBlur = () => {
-    if(!showError) setShowError(true);
+    if(!showError) dispatch(formActions.setShowError({ showError: true }));
   }
 
   return (

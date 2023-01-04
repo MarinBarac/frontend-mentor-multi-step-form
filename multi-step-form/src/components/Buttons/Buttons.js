@@ -5,6 +5,12 @@ import { formActions } from "../../store/form-slice";
 const Buttons = () => {
   const dispatch = useDispatch();
   const currentStep = useSelector((state) => state.form.currentStep);
+  const showError = useSelector((state) => state.form.showError);
+
+  const handleIncrease = () => {
+    !showError && dispatch(formActions.setShowError({ showError: true }));
+    dispatch(formActions.increaseStep());
+  }
 
   return (
     <div className={styles.container}>
@@ -19,7 +25,7 @@ const Buttons = () => {
       {currentStep < 3 && (
         <button
           className={`${styles.next} ${styles.btn}`}
-          onClick={() => dispatch(formActions.increaseStep())}
+          onClick={handleIncrease}
         >
           Next Step
         </button>

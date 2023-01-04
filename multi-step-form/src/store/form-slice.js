@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     currentStep: 0,
     submitted: false,
+    showError: false,
     formData: {
         name: '',
         email: '',
@@ -38,6 +39,9 @@ const formSlice = createSlice({
             if(state.currentStep > 0) {
                 state.currentStep--
             }
+        },
+        setShowError(state, action) {
+            state.showError = action.payload.showError;
         },
         submitForm (state, action) {
             state.submitted = true;
