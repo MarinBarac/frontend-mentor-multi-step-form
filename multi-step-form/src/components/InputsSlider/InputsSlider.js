@@ -10,8 +10,8 @@ const InputsSlider = () => {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.container}>
-        <InputSlide input={INPUTS[index]} />
+      <div className={`${styles.container} ${styles[`active-${index}`]}`}>
+        {INPUTS.map(input => <InputSlide input={input} />)}
       </div>
     </div>
   );

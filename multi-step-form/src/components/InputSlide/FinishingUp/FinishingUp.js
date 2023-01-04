@@ -6,7 +6,7 @@ const FinishingUp = () => {
     const formData = useSelector(state => state.form.formData);
 
     const { monthly } = formData;
-    const priceSufix = monthly ? "/mo" : 'yr';
+    const priceSufix = monthly ? "/mo" : '/yr';
     const totalPrice = formData.selectedPlan.price + formData.addOns.reduce((acc, current) => acc + current.price, 0);
 
     return <div className={styles.container}>
@@ -22,7 +22,7 @@ const FinishingUp = () => {
         </div>
         <div className={styles.totalPriceContainer}>
             <p className={styles.totalPriceLabel}>{`Total (${formData.monthly ? 'month' : 'per year'})`}</p>
-            <p className={styles.totalPriceValue}>{`$${totalPrice}/${priceSufix}`}</p>
+            <p className={styles.totalPriceValue}>{`$${totalPrice}${priceSufix}`}</p>
         </div>
     </div>
 }

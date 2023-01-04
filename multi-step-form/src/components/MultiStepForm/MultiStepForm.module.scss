@@ -2,14 +2,12 @@
 
 .wrapper {
     width: 100%;
-    min-height: 100vh;
-    padding: 0 16px;
+    padding: 0;
     position: relative;
     z-index: 5;
 
     .content {
         width: 100%;
-        min-height: 100vh;
         padding-top: 99px;
         padding-bottom: 96px;
     }
