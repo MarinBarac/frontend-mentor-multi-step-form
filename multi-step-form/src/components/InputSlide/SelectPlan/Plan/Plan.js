@@ -13,7 +13,7 @@ const Plan = ({ name, price, img, selected }) => {
     <div
       className={`${styles.container} ${selected ? styles.selected : ""}`}
       onClick={() => {
-        dispatch(formActions.setSelectedPlan({ selectedPlan: name }));
+        dispatch(formActions.setSelectedPlan({ selectedPlan: {name: name, price: price}}));
       }}
     >
       <img src={img} alt={`${name} plan icon`} className={styles.img} />

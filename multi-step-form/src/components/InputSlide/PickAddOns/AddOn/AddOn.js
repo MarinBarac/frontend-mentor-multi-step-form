@@ -9,7 +9,7 @@ const AddOn = ({ addOn, checked }) => {
   
   const toggleAddOn = (event) => {
     if (event.target.checked) {
-      dispatch(formActions.addAddOn({ addOn: {...addOn}}));
+      dispatch(formActions.addAddOn({ addOn: {name: addOn.name, price: monthly ? addOn.price : addOn.price * 10}}));
     } else {
       dispatch(formActions.removeAddOn({ name: addOn.name}));
     }

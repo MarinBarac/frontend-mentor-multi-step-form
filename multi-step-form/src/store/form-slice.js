@@ -7,7 +7,10 @@ const initialState = {
         name: '',
         email: '',
         phone: '',
-        selectedPlan: 'Arcade',
+        selectedPlan: {
+            name: 'Arcade',
+            price: 9
+        },
         monthly: true,
         addOns: [
             {
@@ -49,10 +52,15 @@ const formSlice = createSlice({
             state.formData.phone = action.payload.phone;
         },
         setSelectedPlan(state, action) {
-            console.log(action);
-            state.formData.selectedPlan = action.payload.selectedPlan;
+            console.log(action.payload.selectedPlan);
+            state.formData.selectedPlan = {...action.payload.selectedPlan};
         },
         toggleMonthly(state, action) {
+            if(state.formData.monthly) {
+                state.formData.selectedPlan.price *= 10;
+            } else {
+                state.formData.selectedPlan.price /= 10;
+            }
             state.formData.monthly = !state.formData.monthly;
         },
         setAddOns(state, action) {

@@ -13,13 +13,13 @@ const SelectPlan = () => {
   return (
     <div className={styles.container}>
       {PLANS.map((plan) => (
-        <Plan {...plan} key={plan.name} selected={selectedPlan === plan.name}/>
+        <Plan {...plan} key={plan.name} selected={selectedPlan.name === plan.name}/>
       ))}
       <div className={styles.toggleContainer}>
         <p className={`${styles.toggleLabel} ${monthly ? styles.active : ""}`}>
           Monthly
         </p>
-        <ToggleSwitch onClick={() => dispatch(formActions.toggleMonthly())} />
+        <ToggleSwitch onChange={() => dispatch(formActions.toggleMonthly())} checked={!monthly}/>
         <p className={`${styles.toggleLabel} ${!monthly ? styles.active : ""}`}>
           Yearly
         </p>
