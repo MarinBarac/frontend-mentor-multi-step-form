@@ -6,7 +6,7 @@ const AddOn = ({ name, price }) => {
 
     return <div className={styles.container}>
         <p className={styles.name}>{name}</p>
-        <p className={styles.price}>{`$${price}/${monthly ? 'mo' : 'yr'}`}</p>
+        <p className={styles.price}>{`+$${price}/${monthly ? 'mo' : 'yr'}`}</p>
     </div>
 }
 

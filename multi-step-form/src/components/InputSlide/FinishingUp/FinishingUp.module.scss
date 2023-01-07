@@ -31,12 +31,14 @@
                 }
 
                 .changeSelectedPlan {
+                    width: fit-content;
                     margin: 0;
                     font-weight: 400;
                     font-size: 14px;
                     line-height: 20px;
                     text-decoration-line: underline;
                     color: $cool-gray;
+                    transition: .2s;
                 }
             }
 
@@ -70,6 +72,41 @@
             font-size: 16px;
             line-height: 20px;
             color: $purplish-blue;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .container {
+        .allPrices {
+            padding: 16px 24px 24px;
+            gap: 16px;
+
+            .selectedPlan {
+                padding-bottom: 24px;
+
+                .selectedPlanText {
+                    .selectedPlanName {
+                        font-size: 16px;
+                        line-height: 18px;
+                        margin-bottom: 7px;
+                    }
+
+                    .changeSelectedPlan:hover {
+                        cursor: pointer;
+                        color: $purplish-blue;
+                    }
+                }
+
+                .selectedPlanPrice {
+                    font-size: 16px;
+                }
+            }
+        }
+        .totalPriceContainer {
+            .totalPriceValue {
+                font-size: 20px;
+            }
         }
     }
 }

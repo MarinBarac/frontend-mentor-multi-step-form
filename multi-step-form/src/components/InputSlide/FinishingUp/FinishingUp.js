@@ -22,7 +22,7 @@ const FinishingUp = () => {
         </div>
         <div className={styles.totalPriceContainer}>
             <p className={styles.totalPriceLabel}>{`Total (${formData.monthly ? 'month' : 'per year'})`}</p>
-            <p className={styles.totalPriceValue}>{`$${totalPrice}${priceSufix}`}</p>
+            <p className={styles.totalPriceValue}>{`${monthly ? "+" : ""}$${totalPrice}${priceSufix}`}</p>
         </div>
     </div>
 }

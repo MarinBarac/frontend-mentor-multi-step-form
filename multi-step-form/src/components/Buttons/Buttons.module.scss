@@ -67,5 +67,10 @@
       cursor: pointer;
       background-color: hsla(213, 72%, 31%, 1);
     }
+
+    .confirm:hover {
+      cursor: pointer;
+      background: hsla(243, 100%, 77%, 1);
+    }
   }
 }
