@@ -47,3 +47,11 @@
     border: 1px solid $purplish-blue;
     background-color: $alabaster;
 }
+
+@media screen and (min-width: $tablet) {
+    .container {
+        flex-direction: column;
+        gap: 39px;
+        padding: 16px 20px;
+    }
+}

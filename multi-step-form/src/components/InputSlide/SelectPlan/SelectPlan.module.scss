@@ -3,15 +3,20 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 24px;
+
+  .plansList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
   .toggleContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 24px;
-    padding: 15px 56px;
-    margin-top: 12px;
+    padding: 15px;
     background-color: $alabaster;
     border-radius: 8px;
 
@@ -20,11 +25,23 @@
       font-size: 14px;
       line-height: 16px;
       color: $cool-gray;
+      margin: 0;
       transition: .5s;
     }
 
     .toggleLabel.active {
         color: $marine-blue;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    gap: 32px;
+
+    .plansList {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
   }
 }

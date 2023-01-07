@@ -9,17 +9,26 @@ const SelectPlan = () => {
   const dispatch = useDispatch();
   const monthly = useSelector((state) => state.form.formData.monthly);
   const selectedPlan = useSelector((state) => state.form.formData.selectedPlan);
-  
+
   return (
     <div className={styles.container}>
-      {PLANS.map((plan) => (
-        <Plan {...plan} key={plan.name} selected={selectedPlan.name === plan.name}/>
-      ))}
+      <div className={styles.plansList}>
+        {PLANS.map((plan) => (
+          <Plan
+            {...plan}
+            key={plan.name}
+            selected={selectedPlan.name === plan.name}
+          />
+        ))}
+      </div>
       <div className={styles.toggleContainer}>
         <p className={`${styles.toggleLabel} ${monthly ? styles.active : ""}`}>
           Monthly
         </p>
-        <ToggleSwitch onChange={() => dispatch(formActions.toggleMonthly())} checked={!monthly}/>
+        <ToggleSwitch
+          onChange={() => dispatch(formActions.toggleMonthly())}
+          checked={!monthly}
+        />
         <p className={`${styles.toggleLabel} ${!monthly ? styles.active : ""}`}>
           Yearly
         </p>
