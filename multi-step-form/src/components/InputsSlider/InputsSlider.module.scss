@@ -1,5 +1,7 @@
 @import "../../variables.scss";
 
+$mobile-slide__width: calc(100vw - 32px);
+
 .wrapper {
   width: 100%;
   overflow: hidden;
@@ -8,8 +10,8 @@
 
   .container {
     position: relative;
-    width: 500%;
     display: grid;
+    width: calc(5*$mobile-slide__width + 64px);
     grid-template-columns: repeat(5, 1fr);
     align-items: flex-start;
     gap: 16px;
@@ -23,19 +25,19 @@
   }
 
   .active-1 {
-    left: calc(-100% + 0px);
+    left: calc(-100% + 16px);
   }
 
   .active-2 {
-    left: -200%;
+    left: calc(-200% + 2*16px);
   }
 
   .active-3 {
-    left: -300%;
+    left: calc(-300% + 3*16px);
   }
 
   .active-4 {
-    left: calc(-400% + 16px);
+    left: calc(-400% + 4*16px);
   }
 }
 
@@ -46,6 +48,24 @@
 
     .container {
       padding: 0;
+      width: calc(2250px + 64px);
+      grid-template-columns: repeat(5, 450px);
+    }
+
+    .active-1 {
+      left: calc(-100% - 16px);
+    }
+  
+    .active-2 {
+      left: calc(-200% - 2*16px);
+    }
+  
+    .active-3 {
+      left: calc(-300% - 3*16px);
+    }
+  
+    .active-4 {
+      left: calc(-400% - 4*16px);
     }
   }
 }
