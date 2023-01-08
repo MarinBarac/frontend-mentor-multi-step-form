@@ -49,6 +49,7 @@
 @media screen and (min-width: $tablet) {
   .container {
     width: 100%;
+    max-width: 450px;
     position: relative;
     padding: 0;
     padding-bottom: 16px;
