@@ -43,13 +43,12 @@ $mobile-slide__width: calc(100vw - 32px);
 
 @media screen and (min-width: $tablet) {
   .wrapper {
-    width: 100%;
     max-width: 450px;
 
     .container {
       padding: 0;
-      width: calc(2250px + 64px);
-      grid-template-columns: repeat(5, 450px);
+      width: calc(500% + 64px);
+      grid-template-columns: repeat(5, 1fr);
     }
 
     .active-1 {

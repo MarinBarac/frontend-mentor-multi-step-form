@@ -28,6 +28,7 @@
         background-image: url('../../assets/bg-sidebar-desktop.svg');
         width: 274px;
         height: 568px;
+        flex-shrink: 0;
 
         .list {
             grid-template-columns: 1fr;

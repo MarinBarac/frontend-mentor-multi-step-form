@@ -24,7 +24,8 @@
     .wrapper {
         max-width: 940px;
         height: auto;
-        display: flex;
+        display: grid;
+        grid-template-columns: 273px 1fr;
         gap: 100px;
         padding: 16px;
         background-color: $white;
@@ -32,7 +33,7 @@
         
         .content {
             padding: 0;
-            width: auto;
+            min-width: 200px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
