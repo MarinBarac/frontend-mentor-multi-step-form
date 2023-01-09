@@ -19,7 +19,7 @@ const AddOn = ({ addOn, checked }) => {
     <div className={`${styles.container} ${checked ? styles.selected : ''}`}>
       <input type="checkbox" aria-label={`select ${addOn.name}`} onChange={toggleAddOn} checked={!!checked}/>
       <div className={styles.centerText}>
-        <h3 className={styles.name}>{addOn.name}</h3>
+        <h2 className={styles.name}>{addOn.name}</h2>
         <p className={styles.description}>{addOn.description}</p>
       </div>
       <p className={styles.price}>{`+$${formatedPrice}/${monthly ? 'mo' : 'yr'}`}</p>
