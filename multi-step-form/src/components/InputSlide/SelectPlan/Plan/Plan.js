@@ -18,7 +18,7 @@ const Plan = ({ name, price, img, selected }) => {
     >
       <img src={img} alt={`${name} plan icon`} className={styles.img} />
       <div className={styles.info}>
-        <h3 className={styles.name}>{name}</h3>
+        <h2 className={styles.name}>{name}</h2>
         <p className={styles.price}>{formatedPrice}</p>
         {!monthly && <p className={styles.promo}>2 months free</p>}
       </div>

@@ -13,7 +13,7 @@ const FinishingUp = () => {
         <div className={styles.allPrices}>
             <div className={styles.selectedPlan}>
                 <div className={styles.selectedPlanText}>
-                    <h4 className={styles.selectedPlanName}>{`${formData.selectedPlan.name} (${formData.monthly ? 'Monthly' : 'Yearly'})`}</h4>
+                    <h2 className={styles.selectedPlanName}>{`${formData.selectedPlan.name} (${formData.monthly ? 'Monthly' : 'Yearly'})`}</h2>
                     <p className={styles.changeSelectedPlan}>Change</p>
                 </div>
                 <p className={styles.selectedPlanPrice}>{`$${formData.selectedPlan.price}${priceSufix}`}</p>
