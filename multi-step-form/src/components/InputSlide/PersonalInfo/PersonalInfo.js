@@ -5,7 +5,7 @@ import TextInput from '../../UI/TextInput';
 const PersonalInfo = () => {
 
     return <div className={styles.container}>
-        {INPUTS.map(input => <TextInput {...input} key={input.name}/>)}
+        {INPUTS.map(input => <TextInput {...input} id={input.name.toLowerCase().split(" ").join("-")} key={input.name}/>)}
     </div>
 }
 
